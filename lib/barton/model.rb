@@ -8,7 +8,6 @@ module Barton
       # => data persistence is provided by tire
       include Tire::Model::Persistence
       
-      index_name ENV['ES_INDEX'] || 'barton' 
       document_type :electorate
             
       # => can instantiate an Electorate with a hash
@@ -19,12 +18,13 @@ module Barton
           # => set instance variable
           instance_variable_set("@#{attr}", value)
         end
+        self.class.index_name ENV['ES_INDEX'] || 'barton' 
         generate_id
       end
     
       private
     
-      # => id is a hash of the resource name + state + jurisdiction
+      # => id is a hash of the resource name + state + jurisdiction (but just the first 6 chars)
       def generate_id()
         return nil unless @name and @tags
         salt = @tags.map { |a| a.downcase } & (Barton::STATES + Barton::JURISDICTIONS).map { |a| a.downcase }

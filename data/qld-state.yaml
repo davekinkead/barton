@@ -1,0 +1,729 @@
+---
+- name: Queensland
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  members:
+  - name: Campbell Newman
+    role: Premier
+    party: LNP
+    address: Level 15, Executive Building, 100 George Street, Brisbane Qld 4000
+    email: thepremier@premiers.qld.gov.au
+    phone: 07 3224 4500
+    fax: 07 3221 1809
+  - name: Jeff Seeney
+    role: Deputy Premier and Minister for State Development, Infrastructure and Planning
+    email: deputypremier@ministerial.qld.gov.au
+    phone: (07) 3224 4600
+    fax: (07) 3224 2490
+    web: http://www.parliament.qld.gov.au/members/current/list/bio?member=Seeney+Jeffrey
+    address: Level 12, Executive Building, 100 George Street, BRISBANE QLD 4000
+  - name: Tim Nicholls
+    party: LNP
+  - name: Lawrence Springborg
+    party: LNP
+  - name: John-Paul Langbroek
+    party: LNP
+  - name: Jack Dempsey
+    party: LNP
+  - name: Jarrod Bleijie
+    party: LNP
+  - name: Scott Emerson
+    party: LNP
+    role: Minister for Transport and Main Roads
+    phone: (07) 3237 1111
+    fax: (07) 3224 2493
+    email: transportandmainRoads@ministerial.qld.gov.au
+    web: http://www.parliament.qld.gov.au/members/current/list/bio?member=Emerson+Scott
+    address: Level 15, Capital Hill, 85 George Street, BRISBANE QLD 4000
+  - name: Bruce Flegg
+    party: LNP
+  - name: John McVeigh
+    party: LNP
+  - name: Andrew Powell
+    party: LNP
+  - name: Andrew Cripps
+    party: LNP
+  - name: Mark McArdle
+    party: LNP
+  - name: David Crisafulli
+    party: LNP
+  - name: Tracy Davis
+  - name: Ros Bates
+    party: LNP
+    role: Minister for Science, Information Technology, Innovation and the Arts
+    address: Level 5, Executive Building, 100 George Street Brisbane Qld 4000
+    phone: 07 3224 2880
+    fax: 07 3224 2492
+    email: ScienceandIT@ministerial.qld.gov.au
+  - name: Steven Dickson
+    party: LNP
+  - name: Jann Stuckey
+    party: LNP
+  - name: Glen Elmes
+    party: LNP
+- name: Ashgrove
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+  members:
+  - name: Campbell Newman
+    party: LNP
+    role: Member for Ashgrove
+    email: ashgrove@parliament.qld.gov.au
+    phone: 07 3366 6000
+    web: http://www.parliament.qld.gov.au/members/current/list/bio?member=Newman+Campbell
+    post: PO Box 40, Ashgrove Q 4060
+    address: Ashgrove Central, 221 Waterworks Road, Ashgrove
+
+- name: Aspley
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Brisbane Central
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Clayfield
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Everton
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Ferny Grove
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Kallangur
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Moggill
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Morayfield
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Mount Coot-tha
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Murrumba
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Nudgee
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Pine Rivers
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Redcliffe
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Sandgate
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Stafford
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane North
+
+- name: Algester
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Bulimba
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Capalaba
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Chatsworth
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Cleveland
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Greenslopes
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Inala
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Indooroopilly
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Logan
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Lytton
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Mansfield
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Mount Ommaney
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Redlands
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: South Brisbane
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Springwood
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Stretton
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Sunnybank
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Waterford
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Woodridge
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Yeerongpilly
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Brisbane South
+
+- name: Bundaberg
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Burnett
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+  members:
+  - name: Steve Bennett
+    role: Member for Burnett
+    party: LNP
+    address: Shop 7, Bargara Beach Plaza, 15-19 See Street, Bargara Qld 4670
+    email: burnett@parliament.qld.gov.au
+    phone: 07 4159 1988
+    fax: 07 4159 2696
+- name: Callide
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Gladstone
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Gympie
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Hervey Bay
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Keppel
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Mackay
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Maryborough
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Mirani
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Rockhampton
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Central Queensland
+
+- name: Albert
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+- name: Broadwater
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+  members:
+  - name: Verity Barton
+    role: Member for Broadwater
+    party: LNP
+    address: 102 Imperial Parade, (Cnr Government Rd and Imperial Pde), Labrador Qld
+      4215
+    email: broadwater@parliament.qld.gov.au
+    phone: 07 5563 9010
+    fax: 07 5500 5364
+- name: Burleigh
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+- name: Coomera
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+- name: Currumbin
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+- name: Gaven
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+- name: Mermaid Beach
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+- name: Mudgeeraba
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+  members:
+  - name: Ros Bates
+    party: LNP
+    address: Mudgeeraba Professional Centre, Swan Lane Mudgeeraba Qld 4213
+    email: mudgeeraba@parliament.qld.gov.au
+    phone: 07 5569 0482
+    fax: 07 5569 0675
+- name: Southport
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+- name: Surfers Paradise
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Gold Coast
+
+- name: Barron River
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Burdekin
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Cairns
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Cook
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Dalrymple
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Hinchinbrook
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Mundingburra
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Mulgrave
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Thuringowa
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Townsville
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Whitsunday
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - North Queensland
+
+- name: Beaudesert
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+- name: Bundamba
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+- name: Condamine
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+- name: Ipswich
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+  members:
+  - name: Ian Berry
+    role: Member for Ipswich
+    party: LNP
+    address: 125 Brisbane Road, Booval Qld 4304
+    email: ipswich@parliament.qld.gov.au
+    phone: 07 3202 3452
+    fax: 07 3202 4778
+- name: Ipswich West
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+- name: Lockyer
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+- name: Nanango
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+- name: Southern Downs
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+- name: Toowoomba North
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+- name: Toowoomba South
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - SE Queensland
+
+- name: Buderim
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Sunshine Coast
+
+- name: Caloundra
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Sunshine Coast
+
+- name: Glass House
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Sunshine Coast
+
+- name: Kawana
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Sunshine Coast
+
+- name: Maroochydore
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Sunshine Coast
+
+- name: Nicklin
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Sunshine Coast
+
+- name: Noosa
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Sunshine Coast
+
+- name: Pumicestone
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Sunshine Coast
+
+- name: Gregory
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Western Queensland
+
+- name: Mount Isa
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Western Queensland
+
+- name: Warrego
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  - Western Queensland
+

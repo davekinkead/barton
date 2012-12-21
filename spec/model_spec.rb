@@ -2,6 +2,10 @@ require 'barton/model'
 
 describe Barton::Model do
   describe Barton::Model::Electorate do
+    before do
+      @electorate_with_complete_hash = Barton::Model::Electorate.new :name => 'Wangi Wangi', :tags => ['state', 'New south Wales']
+    end
+    
     
     it "should create an empty object" do
       Barton::Model::Electorate.new.must_be_kind_of Barton::Model::Electorate
@@ -24,11 +28,16 @@ describe Barton::Model do
     end
     
     it "should save and find to persistant data store" do
-      a = Barton::Model::Electorate.new :name => 'Wangi Wangi', :tags => ['state', 'New south Wales']
+      a = @electorate_with_complete_hash
       a.save
       b = Barton::Model::Electorate.find a.id
       b.id.must_equal a.id
       b.name.must_equal 'Wangi Wangi'
+    end
+    
+    it "should find an electorate by id" do
+      elec = Barton::Model::Electorate.find '57a36e'
+      elec.name.must_equal 'Cleveland'
     end
   end
 end
