@@ -7,6 +7,7 @@ module Barton
     
     def setup(env=nil)
       # => set environment
+      Barton.base_url = 'http://localhost:9292' if env == :test
       ENV['ES_INDEX'] = env == :test ? 'barton-test' : 'barton'
       source = env == :test ? 'spec/data' : 'data'
       Tire.index ENV['ES_INDEX'] { delete }
@@ -21,6 +22,14 @@ module Barton
           #puts "Loading #{doc.name}"
         end
       end
+    end
+    
+    def base_url
+      @@api_url ||= 'http://barton.experimentsindemocracy.org'
+    end
+
+    def base_url=(url)
+      @@api_url = url
     end
   end
 end

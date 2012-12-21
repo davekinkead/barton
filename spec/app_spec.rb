@@ -13,9 +13,14 @@ describe Barton::App do
       get '/api'
       assert last_response.ok?
       assert_equal last_response.content_type, "application/json;charset=utf-8"
+      get '/api/'
+      assert last_response.ok?
       get '/api/electorates'
       assert last_response.ok?
-      assert_equal last_response.content_type, "application/json;charset=utf-8"
+      get '/api/electorates/'
+      assert last_response.ok?
+      get '/api/electorates/afd332'
+      assert last_response.ok?
     end
     
     it "should return 404 for incorrect urls" do

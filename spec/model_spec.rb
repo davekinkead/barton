@@ -4,6 +4,7 @@ describe Barton::Model do
   describe Barton::Model::Electorate do
     before do
       @electorate_with_complete_hash = Barton::Model::Electorate.new :name => 'Wangi Wangi', :tags => ['state', 'New south Wales']
+      @electorate_with_incomplete_hash = Barton::Model::Electorate.new :name => 'Wagga Wagga'
     end
     
     
@@ -18,12 +19,12 @@ describe Barton::Model do
     end
     
     it "should create an id" do
-      elec = Barton::Model::Electorate.new :name => 'Wangi Wangi', :tags => ['state', 'New south Wales']
+      elec = @electorate_with_complete_hash
       elec.id.must_equal 'c01d6d'
     end
     
     it "should return id of nil if no name and tag provided" do
-      elec = Barton::Model::Electorate.new :name => 'Wagga Wagga'
+      elec = @electorate_with_incomplete_hash
       elec.id.must_be_nil      
     end
     
@@ -33,6 +34,11 @@ describe Barton::Model do
       b = Barton::Model::Electorate.find a.id
       b.id.must_equal a.id
       b.name.must_equal 'Wangi Wangi'
+    end
+    
+    it "should reject saving an incomplete document" do
+      elec = @electorate_with_incomplete_hash
+      elec.save
     end
     
     it "should find an electorate by id" do

@@ -7,8 +7,9 @@ module Barton
       
       # => data persistence is provided by tire
       include Tire::Model::Persistence
-      
       document_type :electorate
+      
+      validates_presence_of :id, :name, :tags
             
       # => can instantiate an Electorate with a hash
       def initialize(attrs={})
