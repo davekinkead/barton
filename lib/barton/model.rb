@@ -1,4 +1,4 @@
-require 'barton'
+require 'barton/version'
 require 'tire'
 
 module Barton
@@ -7,14 +7,17 @@ module Barton
       
       # => data persistence is provided by tire
       include Tire::Model::Persistence
+      
+      index_name ENV['ES_INDEX'] || 'barton' 
+      document_type :electorate
             
       # => can instantiate an Electorate with a hash
       def initialize(attrs={})
         attrs.each do |attr, value|
-          unless attr == :id
-            self.class.send(:attr_accessor, attr)
-            instance_variable_set("@#{attr}", value)
-          end
+          # => call Tire's property method
+          self.class.property attr
+          # => set instance variable
+          instance_variable_set("@#{attr}", value)
         end
         generate_id
       end

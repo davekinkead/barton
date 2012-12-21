@@ -22,5 +22,13 @@ describe Barton::Model do
       elec = Barton::Model::Electorate.new :name => 'Wagga Wagga'
       elec.id.must_be_nil      
     end
+    
+    it "should save and find to persistant data store" do
+      a = Barton::Model::Electorate.new :name => 'Wangi Wangi', :tags => ['state', 'New south Wales']
+      a.save
+      b = Barton::Model::Electorate.find a.id
+      b.id.must_equal a.id
+      b.name.must_equal 'Wangi Wangi'
+    end
   end
 end
