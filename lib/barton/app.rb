@@ -13,6 +13,7 @@ module Barton
     end 
     
     get '/api/electorates/?:id?' do
+      #results = Barton.electorates params[:id]
       format_response
     end
     

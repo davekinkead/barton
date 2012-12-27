@@ -8,6 +8,7 @@ module Barton
       # => data persistence is provided by tire
       include Tire::Model::Persistence
       document_type :electorate
+      index_name ENV['ES_INDEX']
       
       validates_presence_of :id, :name, :tags
             

@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'rack/test'
 require 'barton/app'
+require 'json'
 
 include Rack::Test::Methods
 
@@ -26,6 +27,16 @@ describe Barton::App do
     it "should return 404 for incorrect urls" do
      	get '/wrong_url'
       assert_equal last_response.status, 404
+    end
+    
+    it "should return correct resources" do
+      get '/api'
+      json = JSON.parse last_response.body
+      json['name'].must_equal 'Barton API - Programmable political access'
+      json.key?('results').must_equal false
+    #  get '/api/electorates/afd332'
+    #  json = JSON.parse last_response.body
+    #  json.key?('results').must_equal true
     end
     
   end

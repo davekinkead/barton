@@ -1,5 +1,4 @@
 require 'tire'
-require 'barton/version'
 require 'barton/model'
 
 module Barton
@@ -8,7 +7,6 @@ module Barton
     def setup(env=nil)
       # => set environment
       Barton.base_url = 'http://localhost:9292' if env == :test
-      ENV['ES_INDEX'] = env == :test ? 'barton-test' : 'barton'
       source = env == :test ? 'spec/data' : 'data'
       Tire.index ENV['ES_INDEX'] { delete }
       puts "Setting up #{env} environment with #{ENV['ES_INDEX']} index"
@@ -19,9 +17,13 @@ module Barton
         data.each do |d|
           doc = Barton::Model::Electorate.new d
           doc.save
-          #puts "Loading #{doc.name}"
         end
       end
+    end
+    
+    def electorates(args={})
+      return nil if args.empty?
+      Barton::Model::Electorate.find args[:id] if args.key? :id
     end
     
     def base_url
