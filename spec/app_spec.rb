@@ -34,9 +34,14 @@ describe Barton::App do
       json = JSON.parse last_response.body
       json['name'].must_equal 'Barton API - Programmable political access'
       json.key?('results').must_equal false
-    #  get '/api/electorates/afd332'
-    #  json = JSON.parse last_response.body
-    #  json.key?('results').must_equal true
+      get '/api/electorates'
+      json = JSON.parse last_response.body
+      json.key?('results').must_equal true
+      json["result_count"].must_equal 10
+      get '/api/electorates/afd332'
+      json = JSON.parse last_response.body
+      json.key?('results').must_equal true
+      json["result_count"].must_equal 1
     end
     
   end

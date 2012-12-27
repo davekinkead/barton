@@ -14,13 +14,14 @@ describe Barton do
   end
   
   describe 'Electorates' do
-    it "should return nil if no args provided" do
-      Barton.electorates.must_be_nil
+    it "should return a list of electorates if no args provided" do
+      elec = Barton.electorates
+      elec.size.must_equal 10
     end
     
     it "should return correct electorate if id provided" do
       elec = Barton.electorates :id => '57a36e'
-      elec.name.must_equal 'Cleveland'
+      elec[0].name.must_equal 'Cleveland'
     end
   end
 end

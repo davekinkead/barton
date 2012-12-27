@@ -1,5 +1,6 @@
 require 'tire'
 require 'barton/model'
+require 'barton/version'
 
 module Barton
   class << self
@@ -7,9 +8,10 @@ module Barton
     def setup(env=nil)
       # => set environment
       Barton.base_url = 'http://localhost:9292' if env == :test
+      Barton.index = env == :test ? 'barton-test' : 'barton'
       source = env == :test ? 'spec/data' : 'data'
-      Tire.index ENV['ES_INDEX'] { delete }
-      puts "Setting up #{env} environment with #{ENV['ES_INDEX']} index"
+      Tire.index Barton.index { delete }
+      puts "Setting up #{env} environment with #{Barton.index} index"
       
       # => purge and load data from YAML source
       Dir["#{source}/*.yaml"].each do |filename|
@@ -22,16 +24,18 @@ module Barton
     end
     
     def electorates(args={})
-      return nil if args.empty?
-      Barton::Model::Electorate.find args[:id] if args.key? :id
-    end
-    
-    def base_url
-      @@api_url ||= 'http://barton.experimentsindemocracy.org'
-    end
-
-    def base_url=(url)
-      @@api_url = url
+      query = :all if args.empty?
+      query = args[:id] if args.key? :id
+      results = []
+      electorates = Barton::Model::Electorate.find query 
+      if electorates.respond_to? :each
+        electorates.each do |elec|
+          results.push elec
+        end
+      else
+        results.push electorates
+      end
+      results
     end
   end
 end

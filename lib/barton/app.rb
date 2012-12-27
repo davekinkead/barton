@@ -13,8 +13,10 @@ module Barton
     end 
     
     get '/api/electorates/?:id?' do
-      #results = Barton.electorates params[:id]
-      format_response
+      query = {}
+      query[:id] = params[:id] if params[:id]
+
+      format_response :results => Barton.electorates(query)
     end
     
     def format_response(args={})
@@ -43,7 +45,7 @@ module Barton
 		#			:mixed => "#{Barton.base_url}/api/electorates?geo=151.2054563,-33.8438383&tags=federal", 
         }
       }
-      JSON.pretty_generate response 
+      JSON.pretty_generate JSON.parse(response.to_json)
     end
   end
 end

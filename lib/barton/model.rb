@@ -8,7 +8,7 @@ module Barton
       # => data persistence is provided by tire
       include Tire::Model::Persistence
       document_type :electorate
-      index_name ENV['ES_INDEX']
+      index_name Barton.index
       
       validates_presence_of :id, :name, :tags
             
@@ -20,7 +20,7 @@ module Barton
           # => set instance variable
           instance_variable_set("@#{attr}", value)
         end
-        self.class.index_name ENV['ES_INDEX'] || 'barton' 
+        self.class.index_name Barton.index
         generate_id
       end
     

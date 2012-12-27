@@ -5,13 +5,11 @@ require 'barton'
 
 task :setup do
   # => setup datastore
-  ENV['ES_INDEX'] = 'barton'
   Barton.setup
 end
 
 task :test do 
   # => setup datastore
-  ENV['ES_INDEX'] = 'barton-test'
   Barton.setup :test
   
   # => run tests
