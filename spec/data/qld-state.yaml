@@ -4,7 +4,7 @@
   - Queensland
   - State
   - Legislative Assembly
-  members:
+  people:
   - name: Campbell Newman
     role: Premier
     party: LNP
@@ -69,7 +69,7 @@
   - State
   - Legislative Assembly
   - Brisbane North
-  members:
+  people:
   - name: Campbell Newman
     party: LNP
     role: Member for Ashgrove
@@ -338,7 +338,7 @@
   - Legislative Assembly
   - Central Queensland
 
-  members:
+  people:
   - name: Steve Bennett
     role: Member for Burnett
     party: LNP
@@ -423,7 +423,7 @@
   - Legislative Assembly
   - Gold Coast
 
-  members:
+  people:
   - name: Verity Barton
     role: Member for Broadwater
     party: LNP
@@ -474,7 +474,7 @@
   - Legislative Assembly
   - Gold Coast
 
-  members:
+  people:
   - name: Ros Bates
     party: LNP
     address: Mudgeeraba Professional Centre, Swan Lane Mudgeeraba Qld 4213
@@ -600,7 +600,7 @@
   - Legislative Assembly
   - SE Queensland
 
-  members:
+  people:
   - name: Ian Berry
     role: Member for Ipswich
     party: LNP

@@ -47,6 +47,17 @@ describe Barton::Model do
         elec = Barton::Model::Electorate.find '57a36e'
         elec.name.must_equal 'Cleveland'
       end
+      
+      it "should find an electorate by :id" do
+        elec = Barton::Model::Electorate.find :id => '57a36e'
+        elec.name.must_equal 'Cleveland'
+      end
+      
+      it "should find an electorate by :tags" do
+        elec = Barton::Model::Electorate.find :tags => ['queensland', 'stafford']
+        elec.size.must_equal 1
+        elec[0].name.must_equal 'Stafford'
+      end
     end
   end
 end

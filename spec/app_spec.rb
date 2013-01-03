@@ -31,17 +31,28 @@ describe Barton::App do
     
     it "should return correct resources" do
       get '/api'
-      json = JSON.parse last_response.body
-      json['name'].must_equal 'Barton API - Programmable political access'
-      json.key?('results').must_equal false
+      json = JSON.parse(last_response.body, {:symbolize_names => true})
+      json[:name].must_equal 'Barton API - Programmable political access'
+      json.key?(:results).must_equal false
+
       get '/api/electorates'
-      json = JSON.parse last_response.body
-      json.key?('results').must_equal true
-      json["result_count"].must_equal 10
+      json = JSON.parse(last_response.body, {:symbolize_names => true})
+      json.key?(:results).must_equal true
+      json[:result_count].must_equal 10
+
       get '/api/electorates/afd332'
-      json = JSON.parse last_response.body
-      json.key?('results').must_equal true
-      json["result_count"].must_equal 1
+      json = JSON.parse(last_response.body, {:symbolize_names => true})
+      json.key?(:results).must_equal true
+      json[:result_count].must_equal 1
+      json[:results][0][:electorate][:name].must_equal 'Queensland'
+      json[:results][0][:electorate][:members][0][:name].must_equal 'Campbell Newman'
+      
+      get '/api/electorates?tags=queensland,state'
+      json = JSON.parse(last_response.body, {:symbolize_names => true})
+      json.key?(:results).must_equal true
+      json[:result_count].must_equal 90
+      json[:results][0][:electorate][:name].must_equal 'Queensland'
+      json[:results][0][:electorate][:members][0][:name].must_equal 'Campbell Newman'
     end
     
   end

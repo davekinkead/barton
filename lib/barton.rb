@@ -23,11 +23,30 @@ module Barton
       end
     end
     
-    def electorates(args={})
-      query = :all if args.empty?
-      query = args[:id] if args.key? :id
+    
+    #  Public: Find matching Electorate(s) based on filters
+    #
+    #  filters - nil or a Hash of filters including
+    #    :id       => String id              
+    #    :tags     => Array of keyword tags
+    #    :geo      => String of long,lat
+    #    :address  => String address         
+    #
+    #  Examples:
+    #    Barton.electorates :id => 'abc123'
+    #
+    #    Barton.electorates :tags => ['queensland', 'local']
+    #    
+    #    Barton.electorates :geo => '123.442,-26.449'
+    #    
+    #    Barton.electorates :address => '123 Ann St, Brisbane, QLD, 4000'
+    #
+    #    Barton.electorates :tags => 'LGA', :address => '123 Ann St, Brisbane, QLD, 4000'
+    #
+    #  Returns an Electorate or array of Electorates
+    def electorates(filters={})
+      electorates = Barton::Model::Electorate.find filters
       results = []
-      electorates = Barton::Model::Electorate.find query 
       if electorates.respond_to? :each
         electorates.each do |elec|
           results.push elec

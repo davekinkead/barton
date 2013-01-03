@@ -23,5 +23,11 @@ describe Barton do
       elec = Barton.electorates :id => '57a36e'
       elec[0].name.must_equal 'Cleveland'
     end
+    
+    it "should return matching electorates if tag provided" do
+      elec = Barton.electorates :tags => ['stafford']
+      elec.size.must_equal 1
+      elec[0].name.must_equal 'Stafford'
+    end
   end
 end

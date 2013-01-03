@@ -15,10 +15,21 @@ module Barton
     get '/api/electorates/?:id?' do
       query = {}
       query[:id] = params[:id] if params[:id]
-
-      format_response :results => Barton.electorates(query)
+      query[:tags] = params[:tags].split(',') if params[:tags]
+      results = Barton.electorates(query)
+      #results.each { |e| puts e.to_json }
+      format_response :results => results
     end
     
+    private
+
+    #   Formats the HTTP response
+    #
+    #   args - Hash of arguments
+    #     :results  =>  Array of results
+    #     :error    =>  String message
+    #
+    #   Returns JSON
     def format_response(args={})
       content_type 'application/json;charset=utf-8' 
 			response = Hash.new
@@ -34,8 +45,8 @@ module Barton
         :home => "#{Barton.base_url}", 
         :api => "#{Barton.base_url}/api", 
         :electorates => "#{Barton.base_url}/api/electorates", 
-    #    :members => "#{Barton.base_url}/api/members",
-    #    :members_of_electorates => "#{Barton.base_url}/api/electorates/:id/members",
+    #    :people => "#{Barton.base_url}/api/people",
+    #    :people_of_electorates => "#{Barton.base_url}/api/electorates/:id/people",
       }
 			response[:examples] = { 
         :electorates => {
