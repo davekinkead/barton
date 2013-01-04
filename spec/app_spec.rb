@@ -29,7 +29,7 @@ describe Barton::App do
       assert_equal last_response.status, 404
     end
     
-    it "should return correct resources" do
+    it "should return correct electorates" do
       get '/api'
       json = JSON.parse(last_response.body, {:symbolize_names => true})
       json[:name].must_equal 'Barton API - Programmable political access'
@@ -47,12 +47,12 @@ describe Barton::App do
       json[:results][0][:electorate][:name].must_equal 'Queensland'
       json[:results][0][:electorate][:members][0][:name].must_equal 'Campbell Newman'
       
-      get '/api/electorates?tags=queensland,state'
+      get '/api/electorates?tags=brisbane,state'
       json = JSON.parse(last_response.body, {:symbolize_names => true})
       json.key?(:results).must_equal true
-      json[:result_count].must_equal 90
-      json[:results][0][:electorate][:name].must_equal 'Queensland'
-      json[:results][0][:electorate][:members][0][:name].must_equal 'Campbell Newman'
+      json[:result_count].must_equal 38
+      #json[:results][0][:electorate][:name].must_equal 'Nudgee'
+      #json[:results][0][:electorate][:members][0][:name].must_equal 'Campbell Newman'
     end
     
   end

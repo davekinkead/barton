@@ -423,16 +423,15 @@
   - State
   - Legislative Assembly
   - Gold Coast
-
   members:
   - name: Verity Barton
     role: Member for Broadwater
     party: LNP
-    address: 102 Imperial Parade, (Cnr Government Rd and Imperial Pde), Labrador Qld
-      4215
+    address: 102 Imperial Parade, (Cnr Government Rd and Imperial Pde), Labrador Qld 4215
     email: broadwater@parliament.qld.gov.au
     phone: 07 5563 9010
     fax: 07 5500 5364
+
 - name: Burleigh
   tags:
   - Queensland
@@ -474,7 +473,6 @@
   - State
   - Legislative Assembly
   - Gold Coast
-
   members:
   - name: Ros Bates
     party: LNP
@@ -482,6 +480,7 @@
     email: mudgeeraba@parliament.qld.gov.au
     phone: 07 5569 0482
     fax: 07 5569 0675
+
 - name: Southport
   tags:
   - Queensland
@@ -600,7 +599,6 @@
   - State
   - Legislative Assembly
   - SE Queensland
-
   members:
   - name: Ian Berry
     role: Member for Ipswich
@@ -609,6 +607,7 @@
     email: ipswich@parliament.qld.gov.au
     phone: 07 3202 3452
     fax: 07 3202 4778
+
 - name: Ipswich West
   tags:
   - Queensland
