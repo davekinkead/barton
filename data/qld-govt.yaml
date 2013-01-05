@@ -1,0 +1,65 @@
+---
+- name: Queensland Government
+  tags:
+  - Queensland
+  - State
+  - Legislative Assembly
+  members:
+  - name: Campbell Newman
+    role: Premier
+    party: LNP
+    address: Level 15, Executive Building, 100 George Street, Brisbane Qld 4000
+    email: thepremier@premiers.qld.gov.au
+    phone: 07 3224 4500
+    fax: 07 3221 1809
+  - name: Jeff Seeney
+    role: Deputy Premier and Minister for State Development, Infrastructure and Planning
+    email: deputypremier@ministerial.qld.gov.au
+    phone: (07) 3224 4600
+    fax: (07) 3224 2490
+    web: http://www.parliament.qld.gov.au/members/current/list/bio?member=Seeney+Jeffrey
+    address: Level 12, Executive Building, 100 George Street, BRISBANE QLD 4000
+  - name: Tim Nicholls
+    party: LNP
+  - name: Lawrence Springborg
+    party: LNP
+  - name: John-Paul Langbroek
+    party: LNP
+  - name: Jack Dempsey
+    party: LNP
+  - name: Jarrod Bleijie
+    party: LNP
+  - name: Scott Emerson
+    party: LNP
+    role: Minister for Transport and Main Roads
+    phone: (07) 3237 1111
+    fax: (07) 3224 2493
+    email: transportandmainRoads@ministerial.qld.gov.au
+    web: http://www.parliament.qld.gov.au/members/current/list/bio?member=Emerson+Scott
+    address: Level 15, Capital Hill, 85 George Street, BRISBANE QLD 4000
+  - name: Bruce Flegg
+    party: LNP
+  - name: John McVeigh
+    party: LNP
+  - name: Andrew Powell
+    party: LNP
+  - name: Andrew Cripps
+    party: LNP
+  - name: Mark McArdle
+    party: LNP
+  - name: David Crisafulli
+    party: LNP
+  - name: Tracy Davis
+  - name: Ros Bates
+    party: LNP
+    role: Minister for Science, Information Technology, Innovation and the Arts
+    address: Level 5, Executive Building, 100 George Street Brisbane Qld 4000
+    phone: 07 3224 2880
+    fax: 07 3224 2492
+    email: ScienceandIT@ministerial.qld.gov.au
+  - name: Steven Dickson
+    party: LNP
+  - name: Jann Stuckey
+    party: LNP
+  - name: Glen Elmes
+    party: LNP
