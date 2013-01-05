@@ -1,117 +1,133 @@
 ---
 - name: Queensland
+  tags:
+  - Queensland
+  - Federal
+  - Senate
   members:
-	- name: Ronald 'Ron' Boswell
-	  title: Senator the Hon
-	  gender: Male
-	  party: Nats
-	  address: Level 36, Waterfront Place, 1 Eagle Street, Brisbane, Qld, 4000
-	  phone: (07) 3001 8150
-	  fax: (07) 3001 8151
-	  post: GPO Box 228, Brisbane, Qld, 4001
-	- name: Suzanne 'Sue' Boyce
-	  title: Senator
-	  state: Qld
-	  gender: Female
-	  party: LP
-	  address: 349 Sandgate Road, , Albion, Qld, 4010
-	  phone: (07) 3862 4044
-	  fax: (07) 3862 4244
-	  post: PO Box 143, Albion DC, Qld, 4010
-	- name: George Brandis
-	  title: Senator the Hon
-	  honorific: SC
-	  state: Qld
-	  gender: Male
-	  party: LP
-	  address: Suite 2, Level 36, Waterfront Place, 1 Eagle Street, Brisbane, Qld, 4000
-	  phone: (07) 3001 8180
-	  fax: (07) 3001 8181
-	  post: GPO Box 228, Brisbane, Qld, 4001
-	- name: Mark Furner
-	  title: Senator
-	  state: Qld
-	  gender: Male
-	  party: ALP
-	  address: Suite 1,  Crossroads, 470 Gympie Road, Strathpine, Qld, 4500
-	  phone: (07) 3881 3710
-	  fax: (07) 3881 3755
-	  tollfree: 1300 884 489
-	  post: PO Box 2246, Strathpine, Qld, 4500
-	- name: Joseph 'John' Hogg
-	  title: Senator the Hon
-	  state: Qld
-	  gender: Male
-	  party: ALP
-	  address: 876 Old Cleveland Road, , Carina, Qld, 4152
-	  phone: (07) 3843 4066
-	  fax: (07) 3843 4077
-	  post: PO Box 615, Carina, Qld, 4152
-	- name: Barnaby Joyce
-	  title: Senator
-	  state: Qld
-	  gender: Male
-	  party: Nats
-	  address: 68 St George's Terrace, St George, Qld, 4487
-	  phone: (07) 4625 1500
-	  fax: (07) 4625 1511
-	  tollfree: 1300 668 135
-	  post: PO Box 628, St George, Qld, 4487
-	- name: Joseph 'Joe' Ludwig
-	  title: Senator the Hon
-	  state: Qld
-	  gender: Male
-	  party: ALP
-	  address: Waterfront Place, 1 Eagle Street, Brisbane, Qld, 4000
-	  phone: (07) 3229 4477
-	  fax: (07) 3229 4140 
-	  tollfree: 1300 301 944
-	  post: GPO Box 2477, Brisbane, Qld, 4002  
-	- name: Ian Macdonald
-	  title: Senator the Hon
-	  state: Qld
-	  gender: Male
-	  party: LP
-	  address: Level 1, 131 Denham Street, Townsville, Qld, 4810
-	  phone: (07) 4771 3066
-	  fax: (07) 4771 3411
-	  tollfree: 1300 301 949
-	  post: PO Box 2185, Townsville, Qld, 4810
-	- name: Brett Mason
-	  title: Senator the Hon
-	  state: Qld
-	  gender: Male
-	  party: LP
-	  address: 2166 Logan Road, Upper Mount Gravatt, Qld, 4122
-	  phone: (07) 3422 1990
-	  fax: (07) 3422 1991
-	  tollfree: 1300 301 952
-	  post: 2166 Logan Road, Upper Mount Gravatt, Qld, 4122
-	- name: Jan McLucas
-	  title: Senator the Hon
-	  state: Qld
-	  gender: Female
-	  party: ALP
-	  address: MacDonnells Solicitors Building, Cnr Shields and Grafton Streets, Cairns, Qld, 4870
-	  phone: (07) 4031 6009
-	  fax: (07) 4031 6167
-	  tollfree: 1300 301 959
-	  post: PO Box 2733, Cairns, Qld, 4870
-	- name: Claire Moore
-	  title: Senator
-	  state: Qld
-	  gender: Female
-	  party: ALP
-	  address: Suite 14 B, 1st Floor Brunswick Central, 421 Brunswick Street, Fortitude Valley, Qld, 4006
-	  phone: (07) 3252 7101
-	  fax: (07) 3252 8957
-	  tollfree: 1300 301 879
-	  post: PO Box 907, Fortitude Valley Post Shop, Fortitude Valley, Qld, 4006
-	- name: Larissa Waters
-	  title: Senator
-	  state: Qld
-	  gender: Female
-	  party: AG
-	  address: Commonwealth Parliamentary Offices, Suite 9, 1 Eagle Street, Brisbane, Qld, 4000
-	  phone: (07) 3001 8120
-	  fax: (07) 3001 8128  
+  - name: Ronald 'Ron' Boswell
+    role: Senator
+    title: Senator the Hon
+    gender: Male
+    party: Nats
+    address: Level 36, Waterfront Place, 1 Eagle Street, Brisbane, Qld, 4000
+    phone: (07) 3001 8150
+    fax: (07) 3001 8151
+    post: GPO Box 228, Brisbane, Qld, 4001
+  - name: Suzanne 'Sue' Boyce
+    role: Senator
+    title: Senator
+    state: Qld
+    gender: Female
+    party: LP
+    address: 349 Sandgate Road, , Albion, Qld, 4010
+    phone: (07) 3862 4044
+    fax: (07) 3862 4244
+    post: PO Box 143, Albion DC, Qld, 4010
+  - name: George Brandis
+    role: Senator
+    title: Senator the Hon
+    honorific: SC
+    state: Qld
+    gender: Male
+    party: LP
+    address: Suite 2, Level 36, Waterfront Place, 1 Eagle Street, Brisbane, Qld, 4000
+    phone: (07) 3001 8180
+    fax: (07) 3001 8181
+    post: GPO Box 228, Brisbane, Qld, 4001
+  - name: Mark Furner
+    role: Senator
+    title: Senator
+    state: Qld
+    gender: Male
+    party: ALP
+    address: Suite 1,  Crossroads, 470 Gympie Road, Strathpine, Qld, 4500
+    phone: (07) 3881 3710
+    fax: (07) 3881 3755
+    tollfree: 1300 884 489
+    post: PO Box 2246, Strathpine, Qld, 4500
+  - name: Joseph 'John' Hogg
+    role: Senator
+    title: Senator the Hon
+    state: Qld
+    gender: Male
+    party: ALP
+    address: 876 Old Cleveland Road, , Carina, Qld, 4152
+    phone: (07) 3843 4066
+    fax: (07) 3843 4077
+    post: PO Box 615, Carina, Qld, 4152
+  - name: Barnaby Joyce
+    role: Senator
+    title: Senator
+    state: Qld
+    gender: Male
+    party: Nats
+    address: 68 St George's Terrace, St George, Qld, 4487
+    phone: (07) 4625 1500
+    fax: (07) 4625 1511
+    tollfree: 1300 668 135
+    post: PO Box 628, St George, Qld, 4487
+  - name: Joseph 'Joe' Ludwig
+    role: Senator
+    title: Senator the Hon
+    state: Qld
+    gender: Male
+    party: ALP
+    address: Waterfront Place, 1 Eagle Street, Brisbane, Qld, 4000
+    phone: (07) 3229 4477
+    fax: (07) 3229 4140 
+    tollfree: 1300 301 944
+    post: GPO Box 2477, Brisbane, Qld, 4002  
+  - name: Ian Macdonald
+    role: Senator
+    title: Senator the Hon
+    state: Qld
+    gender: Male
+    party: LP
+    address: Level 1, 131 Denham Street, Townsville, Qld, 4810
+    phone: (07) 4771 3066
+    fax: (07) 4771 3411
+    tollfree: 1300 301 949
+    post: PO Box 2185, Townsville, Qld, 4810
+  - name: Brett Mason
+    role: Senator
+    title: Senator the Hon
+    state: Qld
+    gender: Male
+    party: LP
+    address: 2166 Logan Road, Upper Mount Gravatt, Qld, 4122
+    phone: (07) 3422 1990
+    fax: (07) 3422 1991
+    tollfree: 1300 301 952
+    post: 2166 Logan Road, Upper Mount Gravatt, Qld, 4122
+  - name: Jan McLucas
+    role: Senator
+    title: Senator the Hon
+    state: Qld
+    gender: Female
+    party: ALP
+    address: MacDonnells Solicitors Building, Cnr Shields and Grafton Streets, Cairns, Qld, 4870
+    phone: (07) 4031 6009
+    fax: (07) 4031 6167
+    tollfree: 1300 301 959
+    post: PO Box 2733, Cairns, Qld, 4870
+  - name: Claire Moore
+    role: Senator
+    title: Senator
+    state: Qld
+    gender: Female
+    party: ALP
+    address: Suite 14 B, 1st Floor Brunswick Central, 421 Brunswick Street, Fortitude Valley, Qld, 4006
+    phone: (07) 3252 7101
+    fax: (07) 3252 8957
+    tollfree: 1300 301 879
+    post: PO Box 907, Fortitude Valley Post Shop, Fortitude Valley, Qld, 4006
+  - name: Larissa Waters
+    role: Senator
+    title: Senator
+    state: Qld
+    gender: Female
+    party: AG
+    address: Commonwealth Parliamentary Offices, Suite 9, 1 Eagle Street, Brisbane, Qld, 4000
+    phone: (07) 3001 8120
+    fax: (07) 3001 8128  
