@@ -78,6 +78,26 @@ module Barton
         end
         hashes
       end
+      
+      #   Public: Generates a name string from a hash of values
+      #     
+      #     :hash
+      #
+      #   Examples:
+      #     
+      #     Barton::Data.parse_name :surname => 'Smith', :firstname => 'Bob'
+      #       # => 'Bob Smith'
+      #
+      #   Returns a String
+      def parse_name(hash)
+        hash.inject({}){ |h, (n,v)| h[n.to_sym] = v; h }
+        name = ''
+        [:firstname, :first, :first_name].each { |val| name = hash[val] if hash.key? val }
+        [:initials].each { |val| name = hash[val] if hash.key? val and name == ''  }
+        [:preferred, :preferred_name].each { |val| name += " '#{hash[val]}'" if hash.key? val }
+        [:surname, :last, :lastname, :last_name].each { |val| name += " #{hash[val]}" if hash.key? val }
+        name.strip
+      end
     end
   end
 end

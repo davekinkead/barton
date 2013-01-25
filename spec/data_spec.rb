@@ -35,6 +35,18 @@ describe Barton::Data do
     end
   end
   
+  describe "parse_name" do
+    it "should return a string" do
+      Barton::Data.parse_name(:surname => 'Smith').must_be_kind_of String
+    end
+    
+    it "should parse a name from valid hash keys" do
+      Barton::Data.parse_name(:surname => 'Smith', :firstname => 'Bob').must_equal 'Bob Smith'
+      Barton::Data.parse_name(:surname => 'Smith', :first => 'Robert', :preferred_name => 'Bob').must_equal "Robert 'Bob' Smith"
+      Barton::Data.parse_name(:surname => 'Smith', :initials => 'R.A.').must_equal "R.A. Smith"
+    end
+  end
+  
   describe "merge" do
     it "merge 2 yaml files and return a string" do
       merged = Barton::Data.merge :source => 'raw/qld-la.yaml', :target => 'spec/data/qld-state.yaml', :electorate => 'electorate'

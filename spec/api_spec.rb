@@ -40,20 +40,19 @@ describe Barton::App do
       json.key?(:results).must_equal true
       json[:result_count].must_equal 10
 
-      get '/api/electorates/afd332'
+      get '/api/electorates/2ff439'
       json = JSON.parse(last_response.body, {:symbolize_names => true})
       json.key?(:results).must_equal true
       json[:result_count].must_equal 1
-      json[:results][0][:electorate][:name].must_equal 'Queensland'
-      json[:results][0][:electorate][:members][0][:name].must_equal 'Campbell Newman'
+      json[:results].first[:electorate][:name].must_equal 'Ashgrove'
+      json[:results].first[:electorate][:members].first[:name].must_equal 'Campbell Newman'
+      json[:results].first[:electorate][:members].first[:url].must_equal 'Campbell Newman'
       
-      get '/api/electorates?tags=brisbane,state'
+      get '/api/electorates?tags=name:a*,state'
       json = JSON.parse(last_response.body, {:symbolize_names => true})
       json.key?(:results).must_equal true
-      json[:result_count].must_equal 38
-      #json[:results][0][:electorate][:name].must_equal 'Nudgee'
-      #json[:results][0][:electorate][:members][0][:name].must_equal 'Campbell Newman'
+      json[:result_count].must_be :>=, 4
+      json[:results].first[:electorate][:name].must_equal 'Algester'
     end
-    
   end
 end

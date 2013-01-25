@@ -3,15 +3,18 @@ require "bundler/gem_tasks"
 require 'rake/testtask'
 require 'barton'
 
-task :setup do
-  # => setup datastore
-  Barton.setup
+# => setup datastore
+namespace :setup do
+  task :production do
+    Barton.setup 
+  end
+  
+  task :test do
+    Barton.setup :test
+  end
 end
 
 task :test do 
-  # => setup datastore
-  Barton.setup :test
-  
   # => run tests
   Rake::TestTask.new do |t|
     t.libs << "spec"
