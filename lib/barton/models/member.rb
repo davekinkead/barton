@@ -1,14 +1,38 @@
 require 'barton/models/base'
+require 'barton/models/electorate'
 require 'barton/version'
+require 'tire'
 
 module Barton
   module Models
     class Member < Base
-      
+            
       index_name Barton.index
       document_type :member
       validates_presence_of :id, :name, :electorate
+  
+      property :id
+      property :name
+      property :tags,   :default => []
+      property :role  
+      property :electorate
       
+      # => override to accept :member => { :args }
+      def initialize(args={})
+        args = args[:member] if args.key? :member
+        args = args['member'] if args.key? 'member'
+        super args
+      end
+      
+      def save
+        generate_id
+        super
+      end
+      
+      # => Change default JSON behaviour
+      def as_json(options={})
+        super 
+      end
       
       private 
       

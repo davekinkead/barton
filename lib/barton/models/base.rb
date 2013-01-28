@@ -11,15 +11,14 @@ module Barton
       # => can instantiate an Electorate with a hash
       def initialize(attrs={})
         attrs.each do |attr, value|
-          unless attr == :members
-            # => call Tire's property method
-            self.class.property attr
-            # => set instance variable
-            instance_variable_set("@#{attr}", value) 
-          end
+          # => call Tire's property method if it hasn't been set
+          self.class.property attr unless self.class.property_types.keys.include? attr
+          # => set instance variable
+          instance_variable_set("@#{attr}", value) 
         end
         self.class.index_name Barton.index
         generate_id
+        super attrs
       end
       
       # => Change default JSON behaviour

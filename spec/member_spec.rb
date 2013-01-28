@@ -12,17 +12,17 @@ describe Barton::Models::Member do
       member.must_be_kind_of Barton::Models::Member
     end
     
-    it "should create a Member with hash correct input" do
-      member = Barton::Models::Member.new :name => 'Campbell Newman', :role => 'Premier of Queensland', :represents => 'Queensland'
-      member.name.must_equal 'Campbell Newman'
-    end
-
     it "should return an id if name and electorate provided" do
       @member_with_complete_hash.id.must_equal '8084e9'
     end
         
     it "should return id of nil if no name and electorate provided" do
       @member_with_incomplete_hash.id.must_be_nil
+    end
+    
+    it "should create a Member with hash correct input" do
+      member = Barton::Models::Member.new :name => 'Campbell Newman', :role => 'Premier of Queensland', :electorate => 'Queensland'
+      member.name.must_equal 'Campbell Newman'
     end
     
     it "should save a validated member" do
@@ -34,5 +34,17 @@ describe Barton::Models::Member do
     it "should reject invalidated members" do
       @member_with_incomplete_hash.save.must_equal false
     end
+    
+    it "should correctly populate a member from both { :name => ... } and { :member => { :name => .... } }" do
+      m1 = Barton::Models::Member.find @member_with_complete_hash.id
+      m1.id.must_equal '8084e9'
+      m2 = Barton::Models::Member.new :member => { :name => 'Campbell Newman', :role => 'Premier', :electorate => 'Queensland Government' }
+      m2.id.must_equal '8084e9'
+      m2.name.must_equal 'Campbell Newman'
+    end
+  end
+  
+  describe "search" do
+    
   end
 end

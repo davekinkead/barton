@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+require 'sinatra/contrib'
 require 'json'
 require 'barton'
 

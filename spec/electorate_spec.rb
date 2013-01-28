@@ -1,13 +1,15 @@
 require 'barton/models/electorate'
 require 'barton/models/member'
 
+
 describe Barton::Models::Electorate do
+  before do
+    @electorate_with_complete_hash = Barton::Models::Electorate.new :name => 'Wangi Wangi', :tags => ['state', 'New south Wales']
+    @electorate_with_incomplete_hash = Barton::Models::Electorate.new :name => 'Wagga Wagga'
+    @electorate_with_member = Barton::Models::Electorate.new :name => 'testville', :tags => ['Tasmania'], :members => [{:name => 'Bob', :role => 'The Dude'}]
+  end
+  
   describe "setup" do  
-    before do
-      @electorate_with_complete_hash = Barton::Models::Electorate.new :name => 'Wangi Wangi', :tags => ['state', 'New south Wales']
-      @electorate_with_incomplete_hash = Barton::Models::Electorate.new :name => 'Wagga Wagga'
-    end
-      
     it "should create an empty object" do
       Barton::Models::Electorate.new.must_be_kind_of Barton::Models::Electorate
     end
@@ -39,6 +41,19 @@ describe Barton::Models::Electorate do
     it "should reject saving an incomplete document" do
       elec = @electorate_with_incomplete_hash
       elec.save
+    end
+    
+    it "should save nested members who inherit their electorate tags" do
+      elec = Barton::Models::Electorate.new :name => 'testville', :tags => ['Tasmania'], :members => [{:name => 'Bob', :role => 'The Dude'}]
+      elec.save
+      elec.id.must_equal 'b50418'
+      elec.members.first.name.must_equal 'Bob'
+      elec.members.first.id.must_equal '95d212'
+      member = Barton::Models::Member.find '95d212'
+      member.name.must_equal 'Bob'
+      member.id.must_equal '95d212'
+      member.electorate.must_equal 'testville'
+      member.tags.must_equal ['Tasmania']
     end
   end
     

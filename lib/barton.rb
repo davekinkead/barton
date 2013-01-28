@@ -26,24 +26,7 @@ module Barton
       Dir["#{source}/*.yaml"].each do |filename|
         data = YAML::load_file filename if File.exist? filename
         data.each do |datum|
-          # Members and electorates to be stored as seperate documents
-          #
-          # - Electorate member data to be :id :name, & :role
-          # - Members are to inherit the tags from their electorates
-          #
-          members = []
-          electorate = datum.select { |k,v| k != 'members' }
-          datum['members'].each do |m|
-            m['electorate'] = electorate['name']
-            m['tags'] ||= []
-            m['tags'] += electorate['tags'] if electorate.key? 'tags'
-            m = Barton::Models::Member.create m
-            member = {}
-            member['id'], member['name'], member['role'] = m.id, m.name, m.role
-            members.push member
-          end if datum.key? 'members'
-          electorate['members'] = members || []
-          Barton::Models::Electorate.create electorate
+          Barton::Models::Electorate.create datum
         end
         p "Loading #{filename}...."
       end

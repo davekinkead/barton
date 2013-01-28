@@ -1,15 +1,30 @@
 require 'barton/models/base'
 require 'barton/models/member'
 require 'barton/version'
+require 'tire'
 
 module Barton
   module Models
     class Electorate < Base
-      
+            
       index_name Barton.index
       document_type :electorate
       validates_presence_of :id, :name, :tags
-      property :members, :class => [Barton::Models::Member]
+      
+      property :id
+      property :name
+      property :tags,     :default => []
+      property :members,  :default => [],   :class => [Barton::Models::Member]
+      
+      # => preformat nested members before saving self
+      def save
+        self.members.each do |member| 
+          member.electorate = self.name
+          member.tags += self.tags
+          member.save 
+        end
+        super
+      end
       
       # => override module class method to add custom search
       def self.find(args)
@@ -32,7 +47,7 @@ module Barton
       end
       
       def as_json(options={})
-        super :except => [:_index, :_type, :_version, :_score, :_explanation, :sort, :highlight]
+        super 
       end
       
       private 
