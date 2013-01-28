@@ -45,6 +45,14 @@ describe Barton::Models::Member do
   end
   
   describe "search" do
+    it "should find a member by id" do
+      member = Barton::Models::Member.find '8084e9'
+      member.name.must_equal 'Campbell Newman'
+    end
+    
+    it "should find a member by :tags" do
+      
+    end
     
   end
 end

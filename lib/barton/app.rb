@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/contrib'
+require 'sinatra/reloader'
 require 'json'
 require 'barton'
 
@@ -7,7 +7,7 @@ module Barton
   class App < Sinatra::Base
   
     register Sinatra::Reloader  # for dev only
-     
+         
     get '/api?/?' do
       format_response
     end 
@@ -17,7 +17,14 @@ module Barton
       query[:id] = params[:id] if params[:id]
       query[:tags] = params[:tags].split(',') if params[:tags]
       results = Barton.electorates(query)
-      #results.each { |e| puts e.to_json }
+      format_response :results => results
+    end
+    
+    get '/api/members/?:id?' do
+      query = {}
+      query[:id] = params[:id] if params[:id]
+      query[:tags] = params[:tags].split(',') if params[:tags]
+      results = Barton.members(query)
       format_response :results => results
     end
     
@@ -31,7 +38,6 @@ module Barton
     #
     #   Returns JSON
     def format_response(args={})
-      content_type 'application/json;charset=utf-8' 
 			response = Hash.new
 			response[:name] = "Barton API - Programmable political access"
 			response[:disclaimer] = "This data is crowded sourced and provided free of charge for informational purposes only. No guarantees are made whatsoever regarding data quality, except of course, its sheer swankiness."
@@ -39,6 +45,7 @@ module Barton
       if args.key? :results
         response[:result_count] = args[:results].length
         response[:results] = args[:results]
+        status 204 if response[:result_count] == 0
       end
       response[:error] = args[:error] if args.key? :error
 			response[:resources] = { 
@@ -56,6 +63,7 @@ module Barton
 		#			:mixed => "#{Barton.base_url}/api/electorates?geo=151.2054563,-33.8438383&tags=federal", 
         }
       }
+      content_type 'application/json;charset=utf-8' 
       JSON.pretty_generate JSON.parse(response.to_json)
     end
   end
