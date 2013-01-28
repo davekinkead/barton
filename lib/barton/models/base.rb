@@ -21,10 +21,12 @@ module Barton
         super attrs
       end
       
+      
       # => Change default JSON behaviour
       def as_json(options={})
         super :except => [:_index, :_type, :_version, :_score, :_explanation, :sort, :highlight]
       end
+      
       
       # => override module class method to add custom search
       def self.find(args)
@@ -49,9 +51,8 @@ module Barton
       private 
       
       # => to be overridden
-      def generate_id
+      def generate_id 
       end
-      
     end
   end
 end

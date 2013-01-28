@@ -1,10 +1,14 @@
-require 'tire'
 require 'barton/models/electorate'
 require 'barton/models/member'
+require 'barton/data'
 require 'barton/version'
 
 module Barton
   class << self
+    
+    #
+    # This is the Public API for Barton
+    #
     
     # Public: Setup the datasource
     #
@@ -15,21 +19,7 @@ module Barton
     #
     # Returns nil
     def setup(env=nil)
-      # => set environment & purge data
-      Barton.base_url = 'http://localhost:9292' if env == :test
-      Barton.index = env == :test ? 'barton-test' : 'barton'
-      source = env == :test ? 'spec/data' : 'data'
-      Tire.index Barton.index { delete }
-      p "Setting up #{env} environment with #{Barton.index} index"
-      
-      # => load new data from YAML source
-      Dir["#{source}/*.yaml"].each do |filename|
-        data = YAML::load_file filename if File.exist? filename
-        data.each do |datum|
-          Barton::Models::Electorate.create datum
-        end
-        p "Loading #{filename}...."
-      end
+      Barton::Data.setup(env)
     end
     
     

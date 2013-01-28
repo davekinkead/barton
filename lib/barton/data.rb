@@ -1,10 +1,38 @@
-#require 'barton/version'
+require 'barton/version'
 require 'csv'
 require 'yaml'
 
 module Barton
   module Data
     class << self
+      
+      
+      #   Public: Purges and recreates the data store
+      #
+      #     :env
+      #
+      #   Examples:
+      #
+      #     Barton::Data.setup :test
+      #
+      #   Returns void
+      def setup(env=nil)
+        # => set environment & purge data
+        Barton.base_url = 'http://localhost:9292' if env == :test
+        Barton.index = env == :test ? 'barton-test' : 'barton'
+        source = env == :test ? 'spec/data' : 'data'
+        Tire.index Barton.index { delete }
+        p "Setting up #{env} environment with #{Barton.index} index"     
+        # => load new data from YAML source
+        Dir["#{source}/*.yaml"].each do |filename|
+          data = YAML::load_file filename if File.exist? filename
+          data.each do |datum|
+            Barton::Models::Electorate.create datum
+          end
+          p "Loading #{filename}...."
+        end
+      end
+    
     
       #   Public: Merges two electorate.yaml files
       #     
