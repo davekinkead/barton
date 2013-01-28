@@ -52,14 +52,14 @@ module Barton
         :home => "#{Barton.base_url}", 
         :api => "#{Barton.base_url}/api", 
         :electorates => "#{Barton.base_url}/api/electorates", 
-    #    :people => "#{Barton.base_url}/api/people",
+        :members => "#{Barton.base_url}/api/members",
     #    :people_of_electorates => "#{Barton.base_url}/api/electorates/:id/people",
       }
 			response[:examples] = { 
         :electorates => {
 					:resource_id => "#{Barton.base_url}/api/electorates/ccbfd1",
 		#			:geo => "#{Barton.base_url}/api/electorates?geo=151.2054563,-33.8438383",
-					:tags => "#{Barton.base_url}/api/electorates?tags=brisbane,local",
+					:tags => "#{Barton.base_url}/api/members?tags=brisbane,local",
 		#			:mixed => "#{Barton.base_url}/api/electorates?geo=151.2054563,-33.8438383&tags=federal", 
         }
       }
