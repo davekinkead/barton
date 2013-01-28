@@ -10,7 +10,7 @@ Barton provides a RESTful HTTP interface to political data.  Dive right in at:
 
 	http://barton.experimentsindemocracy.org/api/
 
-Barton is read only so you'll only neet GET.
+Barton is read only so you'll only need GET.
 
 ## Requests
 
@@ -34,7 +34,7 @@ _Tag_ filters are comma separated keywords for resource attributes. For example,
 
 	/electorates?tags=state,queensland
 
-You can reach even deeper with wildcards and attribute limits (tag filters are conjuntive - they try to match all tags).  Want to find all local government areas from Queensland that have councilors called 'Steve'? No problems:
+You can reach even deeper with wildcards and attribute limits (tag filters are conjunctive - they try to match all tags).  Want to find all local government areas from Queensland that have councillors called 'Steve'? No problems:
 
 	/electorates?tags=lga,queensland,members.name:steve*
 
@@ -45,6 +45,6 @@ Address and Geo filters!
 
 ## Responses
 
-Barton is designed with HATEOS in mind (well, pragmaticly at least).
+Barton is designed with HATEOS in mind (well, pragmatically at least).
 
 ## Contributing

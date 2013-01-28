@@ -6,9 +6,7 @@ require 'barton/version'
 module Barton
   class << self
     
-    #
-    # This is the Public API for Barton
-    #
+    # Barton Public API
     
     # Public: Setup the datasource
     #
