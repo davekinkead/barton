@@ -351,6 +351,17 @@
   - State
   - Legislative Assembly
   - Gold Coast
+  members:
+  - name: Mark Boothman
+    role: Member for Albert
+    title: Mr
+    address: 2 Rochester Drive, Mount Warren Park 4207
+    postal: PO Box 1255, Beenleigh 4207
+    salutation: Mr
+    party: LNP
+    phone: 07 3807 0809
+    fax: 3807 6296
+    web: http://www.markboothman.com/
 
 - name: Broadwater
   tags:

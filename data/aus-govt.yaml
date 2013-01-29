@@ -59,3 +59,29 @@
     tollfree: 1300 301 959
     post: PO Box 2733, Cairns, Qld, 4870
     role:  Parliamentary Secretary to the Prime Minister, Parliamentary Secretary for Disabilities and  Carers
+  - name: Robert 'Bob' Carr
+    title: Senator the Hon
+    gender: MALE
+    party: ALP
+    address: Level 10, Bligh House, 4-6 Bligh Street, Sydney, NSW, 2000
+    phone: (02) 9228 5655
+    fax: (02) 9228 3655
+    postal: GPO Box 36, Sydney, NSW, 2001
+    role: Minister for Foreign Affairs
+  - name: Fiona Nash
+    title: Senator
+    gender: FEMALE
+    party: NATS
+    address: 79 Main Street, Young, NSW, 2594
+    phone: (02) 6382 3400
+    fax: (02) 6382 3499
+    role: Deputy Leader of The Nationals in the Senate
+  - name: John Williams
+    title: Senator
+    gender: MALE
+    party: NATS
+    address: 144 Byron Street, Inverell, NSW, 2360
+    phone: (02) 6721 4500
+    fax: (02) 6721 4544
+    tollfree: 1300 301 815
+    role: The Nationals Whip in the Senate

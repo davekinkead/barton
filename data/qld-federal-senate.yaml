@@ -6,7 +6,7 @@
   - Senate
   members:
   - name: Ronald 'Ron' Boswell
-    role: Senator
+    role: Senator for Queensland
     title: Senator the Hon
     gender: Male
     party: Nats
@@ -15,7 +15,7 @@
     fax: (07) 3001 8151
     post: GPO Box 228, Brisbane, Qld, 4001
   - name: Suzanne 'Sue' Boyce
-    role: Senator
+    role: Senator for Queensland
     title: Senator
     state: Qld
     gender: Female
@@ -25,7 +25,7 @@
     fax: (07) 3862 4244
     post: PO Box 143, Albion DC, Qld, 4010
   - name: George Brandis
-    role: Senator
+    role: Senator for Queensland
     title: Senator the Hon
     honorific: SC
     state: Qld
@@ -36,7 +36,7 @@
     fax: (07) 3001 8181
     post: GPO Box 228, Brisbane, Qld, 4001
   - name: Mark Furner
-    role: Senator
+    role: Senator for Queensland
     title: Senator
     state: Qld
     gender: Male
@@ -47,7 +47,7 @@
     tollfree: 1300 884 489
     post: PO Box 2246, Strathpine, Qld, 4500
   - name: Joseph 'John' Hogg
-    role: Senator
+    role: Senator for Queensland
     title: Senator the Hon
     state: Qld
     gender: Male
@@ -57,7 +57,7 @@
     fax: (07) 3843 4077
     post: PO Box 615, Carina, Qld, 4152
   - name: Barnaby Joyce
-    role: Senator
+    role: Senator for Queensland
     title: Senator
     state: Qld
     gender: Male
@@ -68,7 +68,7 @@
     tollfree: 1300 668 135
     post: PO Box 628, St George, Qld, 4487
   - name: Joseph 'Joe' Ludwig
-    role: Senator
+    role: Senator for Queensland
     title: Senator the Hon
     state: Qld
     gender: Male
@@ -79,7 +79,7 @@
     tollfree: 1300 301 944
     post: GPO Box 2477, Brisbane, Qld, 4002  
   - name: Ian Macdonald
-    role: Senator
+    role: Senator for Queensland
     title: Senator the Hon
     state: Qld
     gender: Male
@@ -90,7 +90,7 @@
     tollfree: 1300 301 949
     post: PO Box 2185, Townsville, Qld, 4810
   - name: Brett Mason
-    role: Senator
+    role: Senator for Queensland
     title: Senator the Hon
     state: Qld
     gender: Male
@@ -101,7 +101,7 @@
     tollfree: 1300 301 952
     post: 2166 Logan Road, Upper Mount Gravatt, Qld, 4122
   - name: Jan McLucas
-    role: Senator
+    role: Senator for Queensland
     title: Senator the Hon
     state: Qld
     gender: Female
@@ -112,7 +112,7 @@
     tollfree: 1300 301 959
     post: PO Box 2733, Cairns, Qld, 4870
   - name: Claire Moore
-    role: Senator
+    role: Senator for Queensland
     title: Senator
     state: Qld
     gender: Female
@@ -123,7 +123,7 @@
     tollfree: 1300 301 879
     post: PO Box 907, Fortitude Valley Post Shop, Fortitude Valley, Qld, 4006
   - name: Larissa Waters
-    role: Senator
+    role: Senator for Queensland
     title: Senator
     state: Qld
     gender: Female

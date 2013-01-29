@@ -1,0 +1,114 @@
+---
+- name: New South Walse
+  tags:
+  - Queensland
+  - Federal
+  - Senate
+  members:
+  - name: Douglas 'Doug' Cameron
+    title: Senator
+    gender: MALE
+    party: ALP
+    address: Unit 6, 5 Raymond Road,, Springwood, NSW, 2777
+    phone: (02) 4751 4288
+    fax: (02) 4751 3288
+    tollfree: 1300 226 005
+    postal: PO Box 322, Springwood, NSW, 2777
+    role: Senator for New South Wales
+  - name: Robert 'Bob' Carr
+    title: Senator the Hon
+    gender: MALE
+    party: ALP
+    address: Level 10, Bligh House, 4-6 Bligh Street, Sydney, NSW, 2000
+    phone: (02) 9228 5655
+    fax: (02) 9228 3655
+    postal: GPO Box 36, Sydney, NSW, 2001
+    role: Senator for New South Wales
+  - name: John Faulkner
+    title: Senator the Hon
+    gender: MALE
+    party: ALP
+    address: Suite1, 1 Park Avenue, , Drummoyne, NSW, 2047
+    phone: (02) 9719 8100
+    fax: (02) 9719 8078
+    tollfree: 1300 301 752
+    role: Senator for New South Wales
+  - name: Concetta Fierravanti-Wells
+    title: Senator
+    gender: FEMALE
+    party: LP
+    address: Suite 1, Level 2, 6-8 Regent Street,, Wollongong, NSW, 2500
+    phone: (02) 4226 1700
+    fax: (02) 4226 1733
+    tollfree: 1300 735 268
+    postal: PO Box 886, Wollongong, NSW, 2520
+    role: Senator for New South Wales
+  - name: William 'Bill' Heffernan
+    title: Senator the Hon
+    gender: MALE
+    party: LP
+    address: Level 7, 100 William Street, East Sydney, NSW, 2011
+    phone: (02) 9357 2600
+    fax: (02) 9357 2800
+    tollfree: 1300 301 796
+    role: Senator for New South Wales
+  - name: Fiona Nash
+    title: Senator
+    gender: FEMALE
+    party: NATS
+    address: 79 Main Street, Young, NSW, 2594
+    phone: (02) 6382 3400
+    fax: (02) 6382 3499
+    role: Senator for New South Wales
+  - name: Ann Payne
+    title: Senator
+    gender: FEMALE
+    party: LP
+    address: 2-12 Macquarie Street, Parramatta, NSW, 2150
+    phone: (02) 9687 8755
+    fax: (02) 9687 8466
+    postal: PO Box 1420, Parramatta, NSW, 2150
+    role: Senator for New South Wales
+  - name: Lee Rhiannon
+    title: Senator
+    gender: FEMALE
+    party: AG
+    address: 72 Campbell Street, , Surry Hills, NSW, 2010
+    phone: (02) 9241 6966
+    fax: (02) 9252 0180
+    role: Senator for New South Wales
+  - name: Arthur Sinodinos
+    title: Senator
+    honorific: AO
+    gender: MALE
+    party: LP
+    address: Angel Place,, 123 Pitt Street, Sydney, NSW, 2000
+    phone: (02) 9223 4388
+    fax: (02) 9223 4399
+    role: Senator for New South Wales
+  - name: Ursula Stephens
+    title: Senator the Hon
+    gender: FEMALE
+    party: ALP
+    address: 91 Bourke Street, Goulburn, NSW, 2580
+    phone: (02) 4822 8155
+    fax: (02) 4822 8156
+    tollfree: 1300 301 987
+    postal: PO Box 1112, Goulburn, NSW, 2580
+    role: Senator for New South Wales
+  - name: Matthew 'Matt' Thistlethwaite
+    title: Senator
+    gender: MALE
+    party: ALP
+    address: Commonwealth Parliamentary Offices, Suite 4, Level 12,, 70 Phillip Street, Sydney, NSW, 2000
+    phone: (02)9241 7730
+    fax: (02)9247 8387
+    role: Senator for New South Wales
+  - name: John Williams
+    title: Senator
+    gender: MALE
+    party: NATS
+    address: 144 Byron Street, Inverell, NSW, 2360
+    phone: (02) 6721 4500
+    fax: (02) 6721 4544
+    tollfree: 1300 301 815
