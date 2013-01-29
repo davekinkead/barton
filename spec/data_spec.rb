@@ -52,7 +52,6 @@ describe Barton::Data do
       merged = Barton::Data.merge :source => 'raw/qld-la.yaml', :target => 'spec/data/qld-state.yaml', :electorate => 'electorate'
       parsed = ''
       proc { parsed = YAML.load merged }.must_be_silent
-      p parsed
     end
   end
 end

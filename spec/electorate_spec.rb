@@ -52,7 +52,7 @@ describe Barton::Models::Electorate do
       member = Barton::Models::Member.find '95d212'
       member.name.must_equal 'Bob'
       member.id.must_equal '95d212'
-      member.electorate.must_equal 'testville'
+      member.represents.must_equal 'testville'
       member.tags.must_equal ['Tasmania']
     end
   end

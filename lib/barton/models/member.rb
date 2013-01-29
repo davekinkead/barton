@@ -9,13 +9,13 @@ module Barton
             
       index_name Barton.index
       document_type :member
-      validates_presence_of :id, :name, :electorate
+      validates_presence_of :id, :name, :represents
   
       property :id
       property :name
       property :tags,   :default => []
       property :role  
-      property :electorate
+      property :represents
       
       
       # => override to accept :member => { :args }
@@ -35,8 +35,8 @@ module Barton
       
       # => id is a hash of the resource name + electorate (but just the first 6 chars)
       def generate_id()
-        return nil unless @name and @electorate
-        @id ||= Digest::SHA1.hexdigest(@name + @electorate)[0..5].force_encoding('utf-8').to_s
+        return nil unless @name and @represents
+        @id ||= Digest::SHA1.hexdigest(@name + @represents)[0..5].force_encoding('utf-8').to_s
       end
     end
   end

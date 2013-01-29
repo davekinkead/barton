@@ -1,6 +1,13 @@
 TODO
 ====
 
+
+Search
+------
+- boolean tag search for both AND & OR.
+- improve nested search so duplicate (members.member.name) isn't needed.
+
+
 Data
 ----
 
@@ -38,9 +45,39 @@ Data
 - NT
 - ACT
 
-- Geo data
+GEO
+---
 
-Search
-------
-- boolean tag search for both AND & OR.
-- improve nested search so duplicate (members.member.name) isn't needed.
+- Federal House of Reps
+- Federal Senate
+- Queensland Government
+- Queensland Legislative Assembly
+- Queensland LGAs
+- Queensland Wards
+- New South Wales Government
+- New South Wales Legislative Assembly
+- New South Wales Legislative Council
+- New South Wales LGAs
+- New South Wales Wards
+- Victorian Government
+- Victorian Legislative Assembly
+- Victorian Legislative Council
+- Victorian LGAs
+- Victorian Wards
+- Tasmanian Government
+- Tasmanian Legislative Assembly
+- Tasmanian Legislative Council
+- Tasmanian LGAs
+- Tasmanian Wards
+- South Australian Government
+- South Australian Legislative Assembly
+- South Australian Legislative Council
+- South Australian LGAs
+- South Australian Wards
+- Western Australian Government
+- Western Australian Legislative Assembly
+- Western Australian Legislative Council
+- Western Australian LGAs
+- Western Australian Wards
+- NT
+- ACT

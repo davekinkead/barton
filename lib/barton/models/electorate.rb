@@ -20,7 +20,7 @@ module Barton
       # => preformat nested members before saving self
       def save
         self.members.each do |member| 
-          member.electorate = self.name
+          member.represents = self.name
           member.tags += self.tags
           member.save 
         end

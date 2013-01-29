@@ -2,7 +2,7 @@ require 'barton/models/member'
 
 describe Barton::Models::Member do
   before do
-    @member_with_complete_hash = Barton::Models::Member.new :name => 'Campbell Newman', :role => 'Premier', :electorate => 'Queensland Government'
+    @member_with_complete_hash = Barton::Models::Member.new :name => 'Campbell Newman', :role => 'Premier', :represents => 'Queensland Government'
     @member_with_incomplete_hash = Barton::Models::Member.new :role => 'some role'
   end
   
@@ -21,7 +21,7 @@ describe Barton::Models::Member do
     end
     
     it "should create a Member with hash correct input" do
-      member = Barton::Models::Member.new :name => 'Campbell Newman', :role => 'Premier of Queensland', :electorate => 'Queensland'
+      member = Barton::Models::Member.new :name => 'Campbell Newman', :role => 'Premier of Queensland', :represents => 'Queensland'
       member.name.must_equal 'Campbell Newman'
     end
     
@@ -38,7 +38,7 @@ describe Barton::Models::Member do
     it "should correctly populate a member from both { :name => ... } and { :member => { :name => .... } }" do
       m1 = Barton::Models::Member.find @member_with_complete_hash.id
       m1.id.must_equal '8084e9'
-      m2 = Barton::Models::Member.new :member => { :name => 'Campbell Newman', :role => 'Premier', :electorate => 'Queensland Government' }
+      m2 = Barton::Models::Member.new :member => { :name => 'Campbell Newman', :role => 'Premier', :represents => 'Queensland Government' }
       m2.id.must_equal '8084e9'
       m2.name.must_equal 'Campbell Newman'
     end
